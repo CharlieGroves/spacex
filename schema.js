@@ -26,7 +26,7 @@ const RocketType = new GraphQLObjectType({
 const RootQuery = new GraphQLObjectType({
     name: 'RootQueryType',
     fields: () => ({
-        lanches: {
+        launches: {
             type: new GraphQLList(LaunchType),
             resolve(parent, args) {
                 return axios.get('https://api.spacexdata.com/v3/launches')
